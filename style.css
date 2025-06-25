@@ -51,6 +51,10 @@ body{
     align-items: center;
 }
 
+.navbar__s4{
+    display: none;
+}
+
 /* My Learning Popup */
 
 .mylearning{
@@ -64,7 +68,7 @@ body{
     border: solid black 1px;
     width: 100px;
     top: 150%;
-    padding: 10px;
+    padding: 20px;
     right: 0;
     display: none;
 }
@@ -85,6 +89,15 @@ body{
     color: white;
     padding: 10px;
     border-radius: 30px;
+    cursor: pointer;
+    border: solid #A435F0 1px;
+}
+
+.categories p:hover{
+    transition: 1s;
+    background-color: transparent;
+    color: black;
+    border: solid #A435F0 1px;
 }
 
 .sale-image{
@@ -103,6 +116,21 @@ body{
     position: absolute;
     top: 10%;
     left: 10%;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoom{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .recommended{
@@ -133,7 +161,7 @@ body{
 .topics__container{
     display: flex;
     gap: 10px;
-    margin: 10px;
+    margin-top: 10px;
     flex-wrap: wrap;
 }
 
